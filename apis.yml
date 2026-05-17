@@ -43,7 +43,7 @@ common:
     url: https://www.manageengine.com/products/service-desk/help/adminguide/api/rest-api.html
   - type: Pricing
     url: https://www.manageengine.com/products/service-desk/pricing.html
-  - type: Sign Up
+  - type: SignUp
     url: https://www.manageengine.com/products/service-desk/free-trial.html
 maintainers:
   - FN: Kin Lane
