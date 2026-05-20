@@ -37,6 +37,10 @@ apis:
       - type: Authentication
         url: https://www.manageengine.com/products/service-desk/help/adminguide/api/oauth-2.0.html
 common:
+  - type: GitHubOrganization
+    url: https://github.com/ManageEngine
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/manageengine-it-service-management
   - type: Website
     url: https://www.manageengine.com/products/service-desk/
   - type: Documentation
