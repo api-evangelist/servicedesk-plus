@@ -1,0 +1,160 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ManageEngine ServiceDesk Plus Cloud API",
+    "version": "v3"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.zoho.com/oauth/v2/auth",
+      "accessTokenUrl": "https://accounts.zoho.com/oauth/v2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Requests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sdpondemand.manageengine.com/app/:portal/api/v3/requests",
+            "params": [
+              {
+                "name": "portal",
+                "value": "",
+                "type": "path",
+                "description": "Portal/organization name"
+              }
+            ]
+          },
+          "docs": "List requests"
+        },
+        {
+          "info": {
+            "name": "Create a new request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sdpondemand.manageengine.com/app/:portal/api/v3/requests",
+            "params": [
+              {
+                "name": "portal",
+                "value": "",
+                "type": "path",
+                "description": "Portal/organization name"
+              }
+            ]
+          },
+          "docs": "Create a new request"
+        },
+        {
+          "info": {
+            "name": "Get a specific request",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sdpondemand.manageengine.com/app/:portal/api/v3/requests/:request_id",
+            "params": [
+              {
+                "name": "portal",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific request"
+        },
+        {
+          "info": {
+            "name": "Modify an existing request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://sdpondemand.manageengine.com/app/:portal/api/v3/requests/:request_id",
+            "params": [
+              {
+                "name": "portal",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Modify an existing request"
+        },
+        {
+          "info": {
+            "name": "Remove a request",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://sdpondemand.manageengine.com/app/:portal/api/v3/requests/:request_id",
+            "params": [
+              {
+                "name": "portal",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a request"
+        },
+        {
+          "info": {
+            "name": "Add a file attachment to a request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sdpondemand.manageengine.com/app/:portal/api/v3/requests/:request_id/attachments",
+            "params": [
+              {
+                "name": "portal",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "request_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a file attachment to a request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
