@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://www.manageengine.com/cybersecurity-solutions.html
+url: https://www.manageengine.com/cybersecurity-solutions.html
+certifications:
+- ISO 27001
+- HIPAA
+- GDPR
+evidence:
+- source: https://www.manageengine.com/cybersecurity-solutions.html
+  keywords:
+  - iso 27001
+  - iso/iec 27001
+  - hipaa
+  - gdpr

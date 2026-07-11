@@ -37,6 +37,12 @@ apis:
       - type: Authentication
         url: https://www.manageengine.com/products/service-desk/help/adminguide/api/oauth-2.0.html
 common:
+  - type: TrustCenter
+    url: security/servicedesk-plus-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/servicedesk-plus-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/servicedesk-plus-domain-security.yml
   - type: Authentication
     url: authentication/servicedesk-plus-authentication.yml
   - type: OAuthScopes
