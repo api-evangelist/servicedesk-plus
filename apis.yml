@@ -37,6 +37,10 @@ apis:
       - type: Authentication
         url: https://www.manageengine.com/products/service-desk/help/adminguide/api/oauth-2.0.html
 common:
+  - type: Authentication
+    url: authentication/servicedesk-plus-authentication.yml
+  - type: OAuthScopes
+    url: scopes/servicedesk-plus-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/ManageEngine
   - type: LinkedIn
@@ -49,6 +53,8 @@ common:
     url: https://www.manageengine.com/products/service-desk/pricing.html
   - type: Signup
     url: https://www.manageengine.com/products/service-desk/free-trial.html
+  - type: Blog
+    url: https://blogs.manageengine.com/feed
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

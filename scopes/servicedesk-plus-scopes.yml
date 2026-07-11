@@ -1,0 +1,41 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/servicedesk-plus-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/servicedesk-plus-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.zoho.com/oauth/v2/auth
+    tokenUrl: https://accounts.zoho.com/oauth/v2/token
+scopes:
+- scope: SDPOnDemand.requests.ALL
+  description: Full access to requests
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/servicedesk-plus-openapi.yml
+- scope: SDPOnDemand.requests.CREATE
+  description: Create requests
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/servicedesk-plus-openapi.yml
+- scope: SDPOnDemand.requests.DELETE
+  description: Delete requests
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/servicedesk-plus-openapi.yml
+- scope: SDPOnDemand.requests.READ
+  description: Read-only access to requests
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/servicedesk-plus-openapi.yml
+- scope: SDPOnDemand.requests.UPDATE
+  description: Update requests
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/servicedesk-plus-openapi.yml
