@@ -1,0 +1,17 @@
+{
+  "repo": "servicedesk-plus",
+  "feeds": [
+    {
+      "source": "https://blogs.manageengine.com/feed",
+      "feed_url": "https://blogs.manageengine.com/feed",
+      "saved": 0,
+      "error": "no_feed_no_posts"
+    },
+    {
+      "source": "https://www.manageengine.com/products/service-desk/free-trial.html",
+      "error": "HTTPError"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 10
+}
