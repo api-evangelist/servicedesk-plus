@@ -1,41 +1,49 @@
 openapi: 3.1.0
 info:
-  title: ManageEngine ServiceDesk Plus Cloud API
-  description: |
-    REST API v3 for ManageEngine ServiceDesk Plus Cloud. Documented at
+  title: ManageEngine ServiceDesk Plus Cloud Requests API
+  description: 'REST API v3 for ManageEngine ServiceDesk Plus Cloud. Documented at
+
     https://www.manageengine.com/products/service-desk/sdpod-v3-api/.
+
     Authentication uses OAuth 2.0. The base URL varies by datacenter
+
     (e.g. https://sdpondemand.manageengine.com) and the portal name is
+
     embedded in the path as /app/{portal}/api/v3/...
+
+    '
   version: v3
 servers:
-  - url: https://sdpondemand.manageengine.com
-    description: US datacenter
-  - url: https://sdpondemand.manageengine.eu
-    description: EU datacenter
-  - url: https://sdpondemand.manageengine.in
-    description: India datacenter
+- url: https://sdpondemand.manageengine.com
+  description: US datacenter
+- url: https://sdpondemand.manageengine.eu
+  description: EU datacenter
+- url: https://sdpondemand.manageengine.in
+  description: India datacenter
 security:
-  - oauth2: []
+- oauth2: []
 tags:
-  - name: Requests
+- name: Requests
 paths:
   /app/{portal}/api/v3/requests:
     parameters:
-      - in: path
-        name: portal
-        required: true
-        schema: { type: string }
-        description: Portal/organization name
+    - in: path
+      name: portal
+      required: true
+      schema:
+        type: string
+      description: Portal/organization name
     get:
-      tags: [Requests]
+      tags:
+      - Requests
       summary: List requests
       operationId: listRequests
       responses:
         '200':
           description: List of requests
     post:
-      tags: [Requests]
+      tags:
+      - Requests
       summary: Create a new request
       operationId: createRequest
       responses:
@@ -43,30 +51,35 @@ paths:
           description: Request created
   /app/{portal}/api/v3/requests/{request_id}:
     parameters:
-      - in: path
-        name: portal
-        required: true
-        schema: { type: string }
-      - in: path
-        name: request_id
-        required: true
-        schema: { type: string }
+    - in: path
+      name: portal
+      required: true
+      schema:
+        type: string
+    - in: path
+      name: request_id
+      required: true
+      schema:
+        type: string
     get:
-      tags: [Requests]
+      tags:
+      - Requests
       summary: Get a specific request
       operationId: getRequest
       responses:
         '200':
           description: Request details
     put:
-      tags: [Requests]
+      tags:
+      - Requests
       summary: Modify an existing request
       operationId: updateRequest
       responses:
         '200':
           description: Request updated
     delete:
-      tags: [Requests]
+      tags:
+      - Requests
       summary: Remove a request
       operationId: deleteRequest
       responses:
@@ -74,16 +87,19 @@ paths:
           description: Request deleted
   /app/{portal}/api/v3/requests/{request_id}/attachments:
     parameters:
-      - in: path
-        name: portal
-        required: true
-        schema: { type: string }
-      - in: path
-        name: request_id
-        required: true
-        schema: { type: string }
+    - in: path
+      name: portal
+      required: true
+      schema:
+        type: string
+    - in: path
+      name: request_id
+      required: true
+      schema:
+        type: string
     post:
-      tags: [Requests]
+      tags:
+      - Requests
       summary: Add a file attachment to a request
       operationId: addRequestAttachment
       responses:
