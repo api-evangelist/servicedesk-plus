@@ -7,7 +7,19 @@ description: >-
   as cloud (SaaS) or on-premises, and exposes a REST API for integrating
   external systems with requests, problems, changes, assets, and the CMDB.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/servicedesk-plus.png
 tags:
   - ITSM
   - Help Desk
@@ -19,23 +31,32 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: servicedesk-plus:rest-api
-    name: ServiceDesk Plus REST API
-    description: >-
-      REST API for ServiceDesk Plus enabling programmatic management of
-      requests, problems, changes, releases, assets, the CMDB, users,
-      technicians, projects, and configuration items.
-    humanURL: https://www.manageengine.com/products/service-desk/sdpod-v3-api/
-    baseURL: https://sdpondemand.manageengine.com/api/v3
-    tags:
-      - ITSM
-      - Service Desk
-      - Requests
-    properties:
-      - type: Documentation
-        url: https://www.manageengine.com/products/service-desk/sdpod-v3-api/
-      - type: Authentication
-        url: https://www.manageengine.com/products/service-desk/help/adminguide/api/oauth-2.0.html
+- aid: servicedesk-plus:rest-api
+  name: ServiceDesk Plus REST API
+  description: >-
+    REST API for ServiceDesk Plus enabling programmatic management of requests, problems, changes, releases,
+    assets, the CMDB, users, technicians, projects, and configuration items.
+  humanURL: https://www.manageengine.com/products/service-desk/sdpod-v3-api/
+  baseURL: https://sdpondemand.manageengine.com/api/v3
+  tags:
+  - ITSM
+  - Service Desk
+  - Requests
+  properties:
+  - type: Documentation
+    url: https://www.manageengine.com/products/service-desk/sdpod-v3-api/
+  - type: Authentication
+    url: https://www.manageengine.com/products/service-desk/help/adminguide/api/oauth-2.0.html
+- aid: servicedesk-plus:servicedesk-plus-requests-api
+  name: ManageEngine ServiceDesk Plus Requests API
+  description: The Requests API from ManageEngine ServiceDesk Plus — 3 operation(s) for requests.
+  humanURL: https://www.manageengine.com/products/service-desk/sdpod-v3-api/
+  baseURL: https://sdpondemand.manageengine.com/api/v3
+  tags:
+  - Requests
+  properties:
+  - type: OpenAPI
+    url: openapi/servicedesk-plus-requests-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/servicedesk-plus-agentic-access.yml
