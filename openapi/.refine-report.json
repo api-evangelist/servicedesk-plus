@@ -1,0 +1,14 @@
+{
+  "provider": "servicedesk-plus",
+  "sources": [
+    "servicedesk-plus-requests-api-openapi.yml"
+  ],
+  "outputs": [
+    "servicedesk-plus-requests-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

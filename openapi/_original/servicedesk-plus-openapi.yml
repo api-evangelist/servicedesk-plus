@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  title: ManageEngine ServiceDesk Plus Cloud API
+  description: |
+    REST API v3 for ManageEngine ServiceDesk Plus Cloud. Documented at
+    https://www.manageengine.com/products/service-desk/sdpod-v3-api/.
+    Authentication uses OAuth 2.0. The base URL varies by datacenter
+    (e.g. https://sdpondemand.manageengine.com) and the portal name is
+    embedded in the path as /app/{portal}/api/v3/...
+  version: v3
+servers:
+  - url: https://sdpondemand.manageengine.com
+    description: US datacenter
+  - url: https://sdpondemand.manageengine.eu
+    description: EU datacenter
+  - url: https://sdpondemand.manageengine.in
+    description: India datacenter
+security:
+  - oauth2: []
+tags:
+  - name: Requests
+paths:
+  /app/{portal}/api/v3/requests:
+    parameters:
+      - in: path
+        name: portal
+        required: true
+        schema: { type: string }
+        description: Portal/organization name
+    get:
+      tags: [Requests]
+      summary: List requests
+      operationId: listRequests
+      responses:
+        '200':
+          description: List of requests
+    post:
+      tags: [Requests]
+      summary: Create a new request
+      operationId: createRequest
+      responses:
+        '201':
+          description: Request created
+  /app/{portal}/api/v3/requests/{request_id}:
+    parameters:
+      - in: path
+        name: portal
+        required: true
+        schema: { type: string }
+      - in: path
+        name: request_id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Requests]
+      summary: Get a specific request
+      operationId: getRequest
+      responses:
+        '200':
+          description: Request details
+    put:
+      tags: [Requests]
+      summary: Modify an existing request
+      operationId: updateRequest
+      responses:
+        '200':
+          description: Request updated
+    delete:
+      tags: [Requests]
+      summary: Remove a request
+      operationId: deleteRequest
+      responses:
+        '204':
+          description: Request deleted
+  /app/{portal}/api/v3/requests/{request_id}/attachments:
+    parameters:
+      - in: path
+        name: portal
+        required: true
+        schema: { type: string }
+      - in: path
+        name: request_id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Requests]
+      summary: Add a file attachment to a request
+      operationId: addRequestAttachment
+      responses:
+        '201':
+          description: Attachment added
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.zoho.com/oauth/v2/auth
+          tokenUrl: https://accounts.zoho.com/oauth/v2/token
+          scopes:
+            SDPOnDemand.requests.ALL: Full access to requests
+            SDPOnDemand.requests.READ: Read-only access to requests
+            SDPOnDemand.requests.CREATE: Create requests
+            SDPOnDemand.requests.UPDATE: Update requests
+            SDPOnDemand.requests.DELETE: Delete requests
