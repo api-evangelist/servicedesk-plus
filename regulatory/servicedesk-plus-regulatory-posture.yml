@@ -1,0 +1,28 @@
+generated: '2026-10-04'
+method: searched
+source: https://www.manageengine.com/privacy.html
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://www.manageengine.com/privacy.html
+        http_status: 200
+        fetched: "true"
+        quote: "The European Economic Area (EEA) provides certain rights to data subjects (including access, rectification, erasure, restriction of processing, data portability, and the right to object and to complain). Zoho undertakes to provide you the same rights no matter where you choose to live."
+        section: "Part I - Information Zoho collects and controls"
+        note: "Confirms provision of data subject rights such as access, rectification, erasure, restriction, portability, objection."
+  data_retention:
+    evidence:
+      - source: https://www.manageengine.com/privacy.html
+        http_status: 200
+        fetched: "true"
+        quote: "We keep your personal information for as long as it is required for the purposes stated in this Privacy Policy. When we no longer have a legitimate need to process your information, we will delete, anonymize, or isolate your information, whichever is appropriate."
+        section: "Part I - Information Zoho collects and controls"
+        note: "Describes retention period based on purpose and deletion when no longer needed."
+  global_privacy_control:
+    evidence:
+      - source: https://www.manageengine.com/privacy.html
+        http_status: 200
+        fetched: "true"
+        quote: "We do not currently honor Do Not Track signals from internet browsers; when a universal standard for processing them emerges, we will follow it."
+        section: "Part III - General"
+        note: "Acknowledges Do Not Track signals and future compliance."

@@ -1,12 +1,25 @@
 aid: servicedesk-plus
+
 name: ManageEngine ServiceDesk Plus
+
 description: >-
   ManageEngine ServiceDesk Plus is a comprehensive IT service management
   (ITSM) suite with incident, problem, change, release, and asset management
   modules, plus a CMDB and project management. ServiceDesk Plus is available
   as cloud (SaaS) or on-premises, and exposes a REST API for integrating
   external systems with requests, problems, changes, assets, and the CMDB.
+
 type: Index
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable contract found despite probing known API hosts and documentation pages.
+  evidence:
+    - url: https://api.manageengine.com/openapi.json
+      status: 000
+  checked: '2026-10-04'
+
 deliveryModel:
   model: saas
   open_source: false
@@ -19,6 +32,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: self-serve
@@ -31,17 +45,84 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/servicedesk-plus.png
+
 tags:
   - ITSM
   - Help Desk
   - Incident Management
   - Asset Management
   - CMDB
+
 url: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/apis.yml
+
 created: '2026-05-11'
+
 modified: '2026-05-11'
+
 specificationVersion: '0.23'
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+
+common:
+  - type: Plans
+    url: plans/servicedesk-plus-plans-pricing.yml
+  - type: Spectral
+    url: rules/servicedesk-plus-rules.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: Compliance
+    url: https://www.manageengine.com/cybersecurity-solutions.html
+  - type: Security
+    url: https://bugbounty.zohocorp.com/bb/info
+  - type: Conformance
+    url: conformance/servicedesk-plus-conformance.yml
+  - type: Overlay
+    url: overlays/servicedesk-plus-requests-api-overlay.yaml
+  - type: LLMsTxt
+    url: llms/servicedesk-plus-llms.txt
+  - type: SecurityTxt
+    url: well-known/servicedesk-plus-security.txt
+  - type: WellKnown
+    url: well-known/servicedesk-plus-well-known.yml
+  - type: Hosts
+    url: hosts/servicedesk-plus-hosts.yml
+  - type: StatusPage
+    url: https://status.manageengine.com/
+  - type: SignUp
+    url: https://sdpondemand.manageengine.com/Register.do?new-index
+  - type: Newsroom
+    url: https://www.manageengine.com/news/in-the-news.html
+  - type: GettingStarted
+    url: https://help.servicedeskplus.com/requests/first-call-resolution.html
+  - type: AgenticAccess
+    url: agentic-access/servicedesk-plus-agentic-access.yml
+  - type: TrustCenter
+    url: security/servicedesk-plus-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/servicedesk-plus-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/servicedesk-plus-domain-security.yml
+  - type: Authentication
+    url: authentication/servicedesk-plus-authentication.yml
+  - type: OAuthScopes
+    url: scopes/servicedesk-plus-scopes.yml
+  - type: GitHubOrganization
+    url: https://github.com/ManageEngine
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/manageengine-it-service-management
+  - type: Website
+    url: https://www.manageengine.com/products/service-desk/
+  - type: Documentation
+    url: https://www.manageengine.com/products/service-desk/help/adminguide/api/rest-api.html
+  - type: Pricing
+    url: https://www.manageengine.com/products/service-desk/pricing.html
+  - type: Blog
+    url: https://blogs.manageengine.com/feed
+
 apis:
 - aid: servicedesk-plus:rest-api
   name: ServiceDesk Plus REST API
@@ -69,33 +150,9 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/servicedesk-plus-requests-api-openapi.yml
-common:
-  - type: AgenticAccess
-    url: agentic-access/servicedesk-plus-agentic-access.yml
-  - type: TrustCenter
-    url: security/servicedesk-plus-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/servicedesk-plus-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/servicedesk-plus-domain-security.yml
-  - type: Authentication
-    url: authentication/servicedesk-plus-authentication.yml
-  - type: OAuthScopes
-    url: scopes/servicedesk-plus-scopes.yml
-  - type: GitHubOrganization
-    url: https://github.com/ManageEngine
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/manageengine-it-service-management
-  - type: Website
-    url: https://www.manageengine.com/products/service-desk/
-  - type: Documentation
-    url: https://www.manageengine.com/products/service-desk/help/adminguide/api/rest-api.html
-  - type: Pricing
-    url: https://www.manageengine.com/products/service-desk/pricing.html
-  - type: Signup
-    url: https://www.manageengine.com/products/service-desk/free-trial.html
-  - type: Blog
-    url: https://blogs.manageengine.com/feed
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 15
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

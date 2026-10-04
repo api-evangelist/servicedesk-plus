@@ -1,0 +1,6 @@
+generated: "2026-10-04"
+method: generated
+source: "openapi/servicedesk-plus-requests-api-openapi.yml"
+overlay:
+  version: "1.0.0"
+  actions: []

@@ -1,0 +1,29 @@
+name: ServiceDesk Plus Plans
+generated: '2026-10-04'
+method: searched
+source: https://www.manageengine.com/products/service-desk/pricing.md
+audience: business-product
+pricing_basis: per-seat
+published: true
+plans:
+  - name: Standard
+    description: On-Premises deployment, IT service desk
+    price_text: US$13 / technician / month
+    price: 13
+    currency: USD
+    billing_period: month
+    limits: []
+  - name: Professional
+    description: On-Premises deployment, IT service desk + asset
+    price_text: US$27 / technician / month
+    price: 27
+    currency: USD
+    billing_period: month
+    limits: []
+  - name: Enterprise
+    description: On-Premises deployment, IT service desk + asset + change + projects
+    price_text: US$67 / technician / month
+    price: 67
+    currency: USD
+    billing_period: month
+    limits: []
