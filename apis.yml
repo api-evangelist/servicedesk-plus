@@ -70,6 +70,9 @@ apis:
   - type: OpenAPI
     url: openapi/servicedesk-plus-requests-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/servicedesk-plus-capability-edges.yml
+    name: ManageEngine ServiceDesk Plus Business Capability Map
   - type: AgenticAccess
     url: agentic-access/servicedesk-plus-agentic-access.yml
   - type: TrustCenter
