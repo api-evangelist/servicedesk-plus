@@ -1,0 +1,11 @@
+generated: '2026-10-04'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/servicedesk-plus-requests-api-openapi.yml
+skills:
+- file: skills/servicedesk-plus-create-and-retrieve-request.md
+  name: servicedesk-plus-create-and-retrieve-request
+  api: openapi/servicedesk-plus-requests-api-openapi.yml
+  operations:
+  - createRequest
+  - getRequest

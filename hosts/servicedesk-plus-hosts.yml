@@ -1,0 +1,199 @@
+generated: '2026-10-04'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 17
+  own: 8
+  other_domain: 7
+  platform: 2
+  roles:
+  - api
+  - docs
+  - identity
+  - marketing
+  - other
+  - partner
+  - portal
+  - security
+  - source
+  - status
+  - website
+hosts:
+- host: accounts.zoho.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: zoho.com
+  role: identity
+  relation: other-domain
+- host: api.manageengine.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: manageengine.com
+  role: api
+  relation: own
+- host: api.manageengine.eu
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: manageengine.eu
+  role: api
+  relation: other-domain
+- host: api.manageengine.in
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: manageengine.in
+  role: api
+  relation: other-domain
+- host: blogs.manageengine.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: manageengine.com
+  role: marketing
+  relation: own
+- host: bugbounty.zohocorp.com
+  found_by:
+  - pointer
+  types:
+  - Security
+  serves: []
+  registrable_domain: zohocorp.com
+  role: security
+  relation: other-domain
+- host: developer.manageengine.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: Zoho Accounts
+  status: 200
+  registrable_domain: manageengine.com
+  role: portal
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: help.servicedeskplus.com
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: servicedeskplus.com
+  role: docs
+  relation: other-domain
+- host: partners.manageengine.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: Sign In | ManageEngine Partner Portal
+  status: 200
+  registrable_domain: manageengine.com
+  role: partner
+  relation: own
+- host: pitstop.manageengine.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: manageengine.com
+  role: other
+  relation: own
+- host: sdpondemand.manageengine.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - well-known
+  types:
+  - SignUp
+  serves:
+  - api
+  registrable_domain: manageengine.com
+  role: identity
+  relation: own
+- host: sdpondemand.manageengine.eu
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: manageengine.eu
+  role: other
+  relation: other-domain
+- host: sdpondemand.manageengine.in
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: manageengine.in
+  role: other
+  relation: other-domain
+- host: status.manageengine.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: manageengine.com
+  role: status
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.manageengine.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - well-known
+  types:
+  - Compliance
+  - Newsroom
+  - Website
+  - Documentation
+  - Pricing
+  serves:
+  - docs
+  registrable_domain: manageengine.com
+  role: website
+  relation: own
