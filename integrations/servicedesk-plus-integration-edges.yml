@@ -16,9 +16,27 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Google Workspace app
+- partner_name: Ansible (ansible-galaxy)
+  partner: ansible
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: ansible-galaxy
+  evidence: https://galaxy.ansible.com/ui/repo/published/manageengine/sdp_cloud/
+  mirror_of: ansible/integrations/ansible-integration-edges.yml
+  apps:
+  - manageengine.sdp_cloud
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: configuration-management content listing (Ansible collection)
 generated: '2026-10-18'
 method: searched
 source:
 - google-workspace/integrations/google-workspace-integration-edges.yml
 checked:
 - google-workspace/integrations/google-workspace-integration-edges.yml
+- ansible/integrations/ansible-integration-edges.yml
